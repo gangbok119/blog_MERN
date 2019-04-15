@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/gangbok119/blog_MERN/issues"
   },
-  "homepage": "https://github.com/gangbok119/blog_MERN#readme"
+  "homepage": "https://github.com/gangbok119/blog_MERN#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.1"
+  }
 }
