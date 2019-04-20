@@ -26,7 +26,7 @@ mongoose
     .catch(err => console.log(err));
 
 app.use(passport.initialize());
-
+mongoose.set('useFindAndModify', false);
 require('./config/passport')(passport);
 
 app.use('/users', usersRoutes);
