@@ -9,6 +9,7 @@ const userModel = require('../../models/User');
 
 const authCheck = passport.authenticate('jwt', { session: false });
 
+const ValidationProfileInput = require("../../validation/profile");
 
 
 // @route   GET api/profile/test
@@ -25,6 +26,7 @@ router.get('/', authCheck, (req, res) => {
     const errors = {};
 
     profileModel.findOne({ user: req.user.id })
+        .populate('user', ['name','avatar'])
         .then(profile => {
             if (!profile) {
                 errors.noprofile = 'There is no profile for this user';
@@ -42,6 +44,12 @@ router.get('/', authCheck, (req, res) => {
 // @access  Private
 router.post('/', authCheck, (req, res) => {
 
+
+    const { errors, isValid} = ValidationProfileInput(req.body);
+
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
 // Get fields
     const profileFields = {};
     profileFields.user = req.user.id;
