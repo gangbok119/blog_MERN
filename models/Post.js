@@ -50,7 +50,7 @@ const PostSchema = new Schema({
     ],
     date:{
         type:Date,
-        default:date.now
+        default:Date.now
     }
 });
 
