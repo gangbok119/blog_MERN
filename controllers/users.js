@@ -3,12 +3,12 @@ const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const keys = require('../../config/keys');
+const keys = require('../config/keys');
 const passport = require('passport');
 
 
 // Load User Model
-const userModel = require('../../models/User');
+const userModel = require('../models/User');
 
 module.exports = {
     user_register:(req, res) => {

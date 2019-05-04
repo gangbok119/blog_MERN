@@ -1,12 +1,12 @@
 
 // Post model
-const postModel = require("../../models/Post");
+const postModel = require("../models/Post");
 // profile model
-const profileModel = require("../../models/Profile");
+const profileModel = require("../models/Profile");
 
 
 // Validation 
-const validatePostInput = require("../../validation/post");
+const validatePostInput = require("../validation/post");
 
 
 module.exports = {

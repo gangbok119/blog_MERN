@@ -1,10 +1,10 @@
 
-const profileModel = require('../../models/Profile');
-const userModel = require('../../models/User');
+const profileModel = require('../models/Profile');
+const userModel = require('../models/User');
 
-const validationProfileInput = require("../../validation/profile");
-const validationExperiecneInput = require('../../validation/experience');
-const validationEducationInput = require('../../validation/education');
+const validationProfileInput = require("../validation/profile");
+const validationExperiecneInput = require('../validation/experience');
+const validationEducationInput = require('../validation/education');
 
 module.exports = {
     profile_one_get:(req, res) => {
