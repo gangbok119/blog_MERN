@@ -17,7 +17,7 @@ const SelectListGroup = ({
     ));
     return (
         <div>
-            <select className={classNames('form-control form-control-lg', {'is-invalid':error})}
+            <select className={classnames('form-control form-control-lg', {'is-invalid':error})}
             name={name}
             value={value}
             onChange={onChange}
